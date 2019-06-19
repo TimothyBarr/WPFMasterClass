@@ -14,6 +14,7 @@ namespace CSharpPartice.Classes
             {
                 if (balance < 1000000)
                     return balance;
+
                 return 1000000;
             }
 
@@ -57,21 +58,15 @@ namespace CSharpPartice.Classes
 
         public override double AddToBalance(double balaceToBeAdded)
         {
+
+
             if (balaceToBeAdded > 1000)
                 balaceToBeAdded = 1000;
             if (balaceToBeAdded < -1000)
                 balaceToBeAdded = -1000;
 
             return base.AddToBalance(balaceToBeAdded);
-        }
-
-        public string GetInformation()
-        {
-            return $"Your current balance is: {Balance:c}";
-//            return $"Your childAccount is: {Balance:c}";
-        }
-
-        
+          }
     }
 
 

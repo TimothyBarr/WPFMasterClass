@@ -21,8 +21,7 @@ namespace CSharpPartice
 
             // use static MySimpleMath.Add funtion
             double simpleMath = MySimpleMath.Add(anInt, anInt);
-            var simpleMathMessage = "This is simpleMath " + simpleMath;
-            Console.WriteLine(simpleMathMessage);
+
 
             // use static MySimpleMath.Add override for an array
             double[] numbers = new double[] { 1, 2, 3, 42, 42154 };
@@ -31,11 +30,13 @@ namespace CSharpPartice
 
             ChildBankAccount childBankAccount = new ChildBankAccount();
             childBankAccount.AddToBalance(100);
-            Console.WriteLine(Information(childBankAccount));
+            var simpleMathMessage = Information(childBankAccount) + simpleMath;
+            Console.WriteLine(simpleMathMessage);
 
             BankAccount bankAccount = new BankAccount();
             bankAccount.AddToBalance(100);
             Console.WriteLine(Information(bankAccount));
+
 
             Console.WriteLine("Hello World!");
 
@@ -48,7 +49,7 @@ namespace CSharpPartice
         }
     }
 
-    class MySimpleMath
+    class MySimpleMath : IInformation
     {
         #region MySimpleMath...
 
@@ -65,6 +66,11 @@ namespace CSharpPartice
                 result += d;
             }
             return result;
+        }
+
+        public string GetInformation()
+        {
+            return $"This is the MySimpleMath ";
         }
 
         #endregion

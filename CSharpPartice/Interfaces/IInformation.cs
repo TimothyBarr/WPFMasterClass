@@ -6,7 +6,7 @@ namespace CSharpPartice.Interfaces
 {
     interface IInformation
     {
-
+        // abstract class definitions
         string GetInformation();
     }
 }
