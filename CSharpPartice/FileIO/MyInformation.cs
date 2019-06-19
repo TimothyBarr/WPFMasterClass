@@ -7,6 +7,7 @@ namespace CSharpPartice.FileIO
 {
     class MyInformation
     {
+
         GetMyMovieInformation getMyMovieInformation = new GetMyMovieInformation();
     }
 
