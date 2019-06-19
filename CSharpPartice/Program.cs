@@ -1,5 +1,6 @@
 ﻿using System;
 using CSharpPartice.Classes;
+using CSharpPartice.FileIO;
 using CSharpPartice.Interfaces;
 
 namespace CSharpPartice
@@ -37,6 +38,7 @@ namespace CSharpPartice
             bankAccount.AddToBalance(100);
             Console.WriteLine(Information(bankAccount));
 
+            MyInformation myInformation = new MyInformation();
 
             Console.WriteLine("Hello World!");
 
