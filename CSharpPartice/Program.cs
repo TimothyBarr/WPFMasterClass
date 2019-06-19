@@ -1,14 +1,14 @@
-﻿using System;
-using CSharpPartice.Classes;
+﻿using CSharpPartice.Classes;
 using CSharpPartice.FileIO;
 using CSharpPartice.Interfaces;
 
+using System;
+
 namespace CSharpPartice
 {
-    class Program
+    internal class Program
     {
-
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             #region Main,,,
 
@@ -23,8 +23,7 @@ namespace CSharpPartice
             // use static MySimpleMath.Add funtion
             double simpleMath = MySimpleMath.Add(anInt, anInt);
 
-
-            // use static MySimpleMath.Add override for an array
+            // use static MySimpleMath.Add override for an arrayee
             double[] numbers = new double[] { 1, 2, 3, 42, 42154 };
             var myAddOverRide = MySimpleMath.Add(numbers);
             Console.WriteLine(myAddOverRide);
@@ -42,7 +41,7 @@ namespace CSharpPartice
 
             Console.WriteLine("Hello World!");
 
-            #endregion
+            #endregion Main,,,
         }
 
         private static string Information(IInformation information)
@@ -51,7 +50,7 @@ namespace CSharpPartice
         }
     }
 
-    class MySimpleMath : IInformation
+    internal class MySimpleMath : IInformation
     {
         #region MySimpleMath...
 
@@ -75,6 +74,6 @@ namespace CSharpPartice
             return $"This is the MySimpleMath ";
         }
 
-        #endregion
+        #endregion MySimpleMath...
     }
 }

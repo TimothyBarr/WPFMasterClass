@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CSharpPartice.FileIO
+﻿namespace CSharpPartice.FileIO
 {
     internal class GetMyMovieInformation
     {
@@ -13,11 +11,7 @@ namespace CSharpPartice.FileIO
         {
             // movie image directory:   C:\Users\Timot\OneDrive\Documents\SoftDesigns Documents\Images\DVD_IMAGES
 
-
             return;
         }
-
-        
     }
-
 }

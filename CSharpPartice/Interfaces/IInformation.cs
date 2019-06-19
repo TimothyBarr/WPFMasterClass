@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CSharpPartice.Interfaces
+﻿namespace CSharpPartice.Interfaces
 {
-    interface IInformation
+    internal interface IInformation
     {
         // abstract class definitions
         string GetInformation();

@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using CSharpPartice.FileIO;
-
-namespace CSharpPartice.FileIO
+﻿namespace CSharpPartice.FileIO
 {
-    class MyInformation
+    internal class MyInformation
     {
-
-        GetMyMovieInformation getMyMovieInformation = new GetMyMovieInformation();
+        private GetMyMovieInformation getMyMovieInformation = new GetMyMovieInformation();
     }
-
-
 }

@@ -10,8 +10,6 @@
     mc:Ignorable="d"
     Title="My Calculator">
 
-
-
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
@@ -20,15 +18,14 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition 
-                x:Name="ledDisplay"  
-                Height="2*"
-                />
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition
+                x:Name="ledDisplay"
+                Height="2*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Label x:Name="resultLabel"
                Content="0"
@@ -41,8 +38,8 @@
             x:Name="acButton"
             Style="{StaticResource additionalButtonsStyle}"
             Grid.Row="1"
-            Content="AC" 
-            Height="60" 
+            Content="AC"
+            Height="60"
             VerticalAlignment="Bottom" />
         <Button
             x:Name="negativeButton"
@@ -166,5 +163,4 @@
             Grid.Column="3"
             Content="=" />
     </Grid>
-
 </Window>

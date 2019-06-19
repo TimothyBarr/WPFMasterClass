@@ -1,18 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace WPFCalculator
 {
@@ -21,8 +7,8 @@ namespace WPFCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        double lastNumber, result;
-        SelectedOperator selectedOperator;
+        private double lastNumber, result;
+        private SelectedOperator selectedOperator;
 
         public MainWindow()
         {
@@ -50,12 +36,15 @@ namespace WPFCalculator
                     case SelectedOperator.Addition:
                         result = SimpleMath.Add(lastNumber, newNumber);
                         break;
+
                     case SelectedOperator.Sustraction:
                         result = SimpleMath.Sustraction(lastNumber, newNumber);
                         break;
+
                     case SelectedOperator.Multiplication:
                         result = SimpleMath.Multiply(lastNumber, newNumber);
                         break;
+
                     case SelectedOperator.Division:
                         result = SimpleMath.Divide(lastNumber, newNumber);
                         break;
@@ -93,7 +82,6 @@ namespace WPFCalculator
                     tempNumber *= lastNumber;
                 resultLabel.Content = tempNumber.ToString();
             }
-
         }
 
         private void NegativeButton_Click(object sender, RoutedEventArgs e)
@@ -126,7 +114,6 @@ namespace WPFCalculator
             if (sender == minusButton)
                 selectedOperator = SelectedOperator.Sustraction;
         }
-
 
         private void NumberButton_Click(object sender, RoutedEventArgs e)
         {
@@ -162,10 +149,8 @@ namespace WPFCalculator
                 resultLabel.Content = $"{resultLabel.Content}{selectedValue}";
             }
         }
-
     }
 }
-
 
 public enum SelectedOperator
 {
@@ -194,7 +179,6 @@ public class SimpleMath
 
     public static double Divide(double n1, double n2)
     {
-        
         if (n2 == 0)
         {
             MessageBox.Show("Division by 0 is not supported", "Wrong operation", MessageBoxButton.OK, MessageBoxImage.Error);

@@ -1,13 +1,11 @@
 ﻿using CSharpPartice.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CSharpPartice.Classes
 {
-     public class BankAccount : IInformation 
+    public class BankAccount : IInformation
     {
         private double balance;
+
         public double Balance
         {
             get
@@ -45,7 +43,7 @@ namespace CSharpPartice.Classes
         {
             //   return $"Your current balance is: {Balance:c}";
             return $"Your current balance is: {Balance:c}";
-//            return $"Your bankAccount is: {Balance:c}";
+            //            return $"Your bankAccount is: {Balance:c}";
         }
     }
 
@@ -58,16 +56,12 @@ namespace CSharpPartice.Classes
 
         public override double AddToBalance(double balaceToBeAdded)
         {
-
-
             if (balaceToBeAdded > 1000)
                 balaceToBeAdded = 1000;
             if (balaceToBeAdded < -1000)
                 balaceToBeAdded = -1000;
 
             return base.AddToBalance(balaceToBeAdded);
-          }
+        }
     }
-
-
 }
